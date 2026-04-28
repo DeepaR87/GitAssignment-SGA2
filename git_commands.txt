@@ -1,44 +1,79 @@
-1. git init
+git init
 Initializes a new Git repository in the project folder.
+This allows Git to start tracking files and changes.
 
-2. git status
-Shows the current status of files (tracked, untracked, modified).
+git status
+Displays the current status of the repository.
+It shows modified, staged, and untracked files.
 
-3. git add .
+git add .
 Adds all files in the current folder to the staging area.
+These files become ready for commit.
 
-4. git commit -m "message"
-Saves the staged changes with a commit message.
+git add .gitignore
+Adds only the .gitignore file to the staging area.
+Used when committing only specific files.
 
-5. git log --oneline
-Displays commit history in short format.
+git commit -m "message"
+Creates a commit with a message describing the changes.
+It saves the current staged version permanently.
 
-6. git branch feature
+git branch feature
 Creates a new branch named feature.
+This helps work on changes separately from main.
 
-7. git checkout feature
-Switches from current branch to feature branch.
+git checkout feature
+Switches from the current branch to the feature branch.
+All further work happens inside that branch.
 
-8. git checkout master
-Switches back to the main/master branch.
+git checkout main
+Switches back to the main branch.
+Used before merging feature into main.
 
-9. git merge feature
-Merges changes from feature branch into master branch.
+git merge feature
+Merges the feature branch changes into the main branch.
+This combines both branch histories.
 
-10. git log --oneline --graph --all
-Shows complete commit history with branch graph.
+git log --oneline
+Displays commit history in short one-line format.
+Useful for quick review of commits.
 
-11. git reset --soft HEAD~1
-Removes the last commit but keeps the changes staged.
+git log --oneline --graph --all
+Shows complete commit history with branch structure.
+It helps visualize branching and merging.
 
-12. git remote add origin <repository-url>
-Connects local repository to GitHub remote repository.
+git reset --soft HEAD~1
+Removes the last commit but keeps changes staged.
+Used for undoing the previous commit safely.
 
-13. git branch -M main
-Renames current branch to main.
+git remote add origin https://github.com/DeepaR87/GitAssignment-SGA2.git
+Connects the local repository to the GitHub remote repository.
+origin is the default remote name.
 
-14. git push -u origin main
-Pushes local repository to GitHub and links the branch.
+git push -u origin main
+Pushes the local main branch to GitHub for the first time.
+It also sets upstream tracking.
 
-15. git push
-Pushes latest commits to GitHub.
+git push
+Pushes the latest local commits to GitHub.
+Used after the first successful push.
+
+git remote -v
+Displays the connected remote repository URLs.
+Used to verify GitHub connection.
+
+git restore --staged index.html
+Removes a staged file from the staging area.
+The file remains unchanged locally.
+
+git restore index.html
+Discards local changes made in the file.
+It restores the last committed version.
+
+git rm --cached test.log
+Removes a file from Git tracking without deleting it locally.
+Useful when applying .gitignore rules.
+
+mkdir temp
+Creates a folder named temp.
+Used to test folder ignore in .gitignore.
